@@ -31,9 +31,8 @@ public class PersonGenerator {
             firstName = SafeInput.getNonZeroLenString(in, "Enter first name: ");
             lastName = SafeInput.getNonZeroLenString(in, "Enter last name: ");
             title = SafeInput.getNonZeroLenString(in, "Enter title: ");
-            yearOfBirth = SafeInput.getRangedInt(in,"Enter birth year [1940-2010]: ", 1940, 2010);
+            yearOfBirth = SafeInput.getRangedInt(in,"Enter birth year ", 1940, 2010);
 
-            //rec = ID + ", " + firstName + ", "  + lastName + ", " + title + ", " + yearOfBirth;
             Person person = new Person(ID, firstName, lastName, title, yearOfBirth);
             records.add(person);
             done = SafeInput.getYNConfirm(in, "Enter Yes or No: ");
